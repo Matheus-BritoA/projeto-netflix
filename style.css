@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 40%,
+        rgba(20, 20, 20, 0.4) 75%,
+        rgba(20, 20, 20, 1) 100%
+    ), url('./img/theofice.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    padding: 0 3.5rem;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-left: 2.5rem;
+}
+
+.menu-left ul, .menu-right ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.menu-left li {
+    color: #e5e5e5;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-left li:hover {
+    color: #b3b3b3;
+}
+
+.menu-left li:first-child {
+    color: white;
+    font-weight: 600;
+}
+
+.menu-right li {
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.menu .user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu .user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.menu i {
+    font-size: 1.2rem;
+}
+
+/* BANNER */
+.banner {
+    position: absolute;
+    bottom: 25%;
+    max-width: 600px;
+}
+
+.banner .subtitle {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* BOTÕES ESTILO NETFLIX */
+.buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: all 0.2s ease;
+    min-height: 2.5rem;
+}
+
+.btn i {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+/* Botão Play */
+.btn:first-child {
+    background-color: white;
+    color: black;
+}
+
+.btn:first-child:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    transform: scale(1.03);
+}
+
+/* Botão Minha Lista */
+.btn:last-child {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.btn:last-child:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+    transform: scale(1.03);
+}
+
+/* CATEGORIES */
+.category {
+    position: absolute;
+    bottom: -200px;
+    left: 3.5rem;
+    right: 0;
+    margin-bottom: 3rem;
+}
+
+.category span {
+    color: #e5e5e5;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.slider {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider .movie {
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slider .movie:hover {
+    transform: scale(1.08);
+}
+
+.slider .movie img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+/* Segunda categoria */
+.category:nth-child(4) {
+    bottom: -450px;
+}
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: -650px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    color: #808080;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer .social i {
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer .social i:hover {
+    color: white;
+}
+
+.flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info ul {
+    list-style: none;
+    text-align: left;
+}
+
+.info ul li {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.info ul li:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Corrigindo o ícone do Facebook */
+.fa-facebook-sqaure {
+    font-family: "Font Awesome 6 Brands";
+}
+.fa-facebook-sqaure:before {
+    content: "\f39e";
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 1.5rem;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 0;
+    }
+    
+    .menu-left ul, .menu-right ul {
+        gap: 1rem;
+    }
+    
+    .banner .subtitle {
+        font-size: 2rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .slider .movie {
+        width: 200px;
+    }
+    
+    .flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .category {
+        left: 1.5rem;
+    }
+    
+    .category:nth-child(4) {
+        bottom: -500px;
+    }
+    
+    .footer {
+        bottom: -700px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 1rem;
+    }
+    
+    .banner .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .menu-left ul, .menu-right ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .slider .movie {
+        width: 150px;
+    }
+    
+    .slider .movie img {
+        height: 140px;
+    }
+    
+    .flex {
+        grid-template-columns: 1fr;
+    }
+}
