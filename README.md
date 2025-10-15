@@ -1,0 +1,2 @@
+# projeto-netflix
+Atividade Netflix para o projeto Transforme-se do Proa. A atividade se baseia em criar uma landing page da Netflix a partir apenas de HTML e CSS.
